@@ -90,8 +90,8 @@ public class TestInventory
 
         Inventory aBag = new Inventory(4);
 
-        aBag.addItems(stacksToAdd.get(0));
-        aBag.addItems(stacksToAdd.get(1));
+        aBag.addItems(stacksToAdd.get(0));        aBag.addItems(stacksToAdd.get(1));
+
         aBag.addItems(stacksToAdd.get(2));
 
         assertFalse(aBag.isFull());
