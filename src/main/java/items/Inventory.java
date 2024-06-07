@@ -143,16 +143,14 @@ public class Inventory
 
         if (this.slots.head == null) {
             this.slots.head = newNode;
+            this.slots.tail = newNode;
+            this.slots.currentSize =1;
         }
-        else {
-            LinkedList.Node<ItemStack> currentNode = this.slots.head;
-            while (currentNode.next != null) {
-                currentNode = currentNode.next;
-            }
-            currentNode.next = newNode;
 
-            this.slots.currentSize++;
-        }
+        this.slots.tail.next = newNode;
+        this.slots.tail = this.slots.tail.next;
+        this.slots.currentSize++;
+        
     }
 
     /**
